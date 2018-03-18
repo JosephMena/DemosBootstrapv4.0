@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container" style="border:1px solid #ccc;margin-top:20px;">
+	  <div class="row">
+		<div class="col">HEADER </div>	
+	  </div>
+	  <div class="row">
+		<div class="col-4 col-xl-2 " id="sidebar"><!-- col-xl-2 hizo un efecto especial -->
+			 <div class="list-group panel">
+                <a href="#menu1" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"><i class="fa fa-dashboard"></i> <span class="hidden-sm-down">Item 1</span> </a>
+                <div class="collapse" id="menu1">
+                    <a href="http://google.com" class="list-group-item" data-parent="#menu1">Subitem 1</a>
+                    <a href="#" class="list-group-item" data-parent="#menu1">Subitem 2</a>
+                </div>
+                <a href="#menu3" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"><i class="fa fa-book"></i> <span class="hidden-sm-down">Item 3 </span></a>
+                <div class="collapse" id="menu3">
+                    <a href="#" class="list-group-item" data-parent="#menu3">3.1</a>
+                    <a href="#menu3sub2" class="list-group-item" data-toggle="collapse" aria-expanded="false">3.2 </a>
+                    <div class="collapse" id="menu3sub2">
+                        <a href="#" class="list-group-item" data-parent="#menu3sub2">3.2 a</a>
+                        <a href="#" class="list-group-item" data-parent="#menu3sub2">3.2 b</a>
+                        <a href="#" class="list-group-item" data-parent="#menu3sub2">3.2 c</a>
+                    </div>
+                    <a href="#" class="list-group-item" data-parent="#menu3">3.3</a>
+                </div>
+            </div>
+		</div>
+		<div class="col-8" style="border:1px solid #fcc;">BODY</div>
+	  </div>
+	  <div class="row">
+		<div class="col">FOOTER</div>
+	  </div>
+	</div>
+	
+	
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
