@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" media="(max-width: 2000px)" href="recursos/css/estilos2000.css">
+		<link rel="stylesheet" media="(max-width: 1700px)" href="recursos/css/estilos1700.css">
+		<link rel="stylesheet" media="(max-width: 1500px)" href="recursos/css/estilos1500.css">
+		<link rel="stylesheet" media="(max-width: 1300px)" href="recursos/css/estilos1300.css">
+		<link rel="stylesheet" media="(max-width: 1200px)" href="recursos/css/estilos1200.css">
+		<link rel="stylesheet" type="text/css" href="recursos/css/estilos.css"/>
+	</head>
+	<body>
+		<div id="contenedor" >
+			<div id="cabecera" >
+				<div id="cab_Contenido">
+				
+					<div id="cab_Cont_Logo"></div>
+					<div id="cab_Cont_Detalle" >
+						<div id="cab_Cont_Det_Informacion">
+							<div id="cab_Cont_Det_Inf_AnioLegal">
+								Lima,<span> </span>#{bmSesion.fechaActual}<span> </span>|
+								<span> </span>#{bmSesion.anioDeclaracion}"
+							</div>
+						</div>
+						<div id="cab_Cont_Det_Titulo">
+							<div id="cab_Cont_Det_Tit_Texto">Sistema de Administracion Inmobiliaria</div>
+							<div id="cab_Cont_Det_Tit_Derecha"></div>
+						</div>
+						<div id="cab_Cont_Det_Informacion">
+							<div id="cab_Cont_Det_Inf_Saludo">
+								Buenos dias, <b>#{bMUsuario.noUsuario}</b>                    	
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="cab_Sombra">
+					<div id="cab_Som_UbicacionPlataforma">        		        		
+														
+					</div>	
+					<div id="cab_Som_Ubicacion">
+						:: Usted se encuentra en:<span><ui:insert name="ubicacion" /></span>
+					</div>
+				   
+					<form >				
+					
+							<a href="#" class="cab_Som_Session">
+								<span>Cerrar sesión</span>
+								<a4j:support event="onclick" status="siguiente"
+											 action="#{bmSesion.cerrarSesion}"
+											 oncomplete="javascript:window.close();" >
+								</a4j:support>
+							</a>
+						
+					<form>
+				</div>
+			</div>
+			<div id="cuerpo">
+				<div id="menu">
+					<h1>MENU</h1>
+					<ul id="men_ContenedorItem">
+						<ui:repeat var="perm" value="#{bmSesion.lstPermisosMenu}">
+							<li>
+								<a id="padre" class="notcurrent">
+									<span style="background-image: none;">
+										<h:outputText value="#{perm.noPermiso}"/>
+									</span>
+								</a>
+								<div class="oculto">
+									<ul class="men_SubContItem">
+										<ui:repeat var="hijo" value="#{perm.lstPermisoHijo}">
+										<li>									
+											<h:commandLink action="#{bmSesion.redireccionar}" value="#{hijo.noPermiso}" >
+												<f:param name="accion" value="#{hijo.noAccion}" />										
+												<f:param name="idPermiso" value="#{hijo.idPermiso}" />
+												<f:param name="noPermiso" value="#{hijo.noPermiso}" />
+												<f:param name="idPermisoPadre" value="#{hijo.idPermisoPadre}"/>									
+											</h:commandLink>
+											
+										</li>
+										</ui:repeat>
+									</ul>
+								</div>
+							</li>
+						</ui:repeat> 
+					</ul>
+				</div>
+				<div id="menuEspacio">
+				</div>
+				<div id="escritorio">
+					<h1><ui:insert name="titulo" /></h1>     
+					<h2><span><ui:insert name="subTitulo" /></span></h2>
+					<div class="esc_formulario" style="width:100%">
+						<div class="messages">
+							
+						</div>
+						<div class="programa" style="">
+							<ui:insert name="body" />
+						</div>				    
+						
+					</div>
+				</div>
+				<div id="piePagina" >
+					<div id="pie_InfoDerecha">Oficina de Normalizacion Previsional, ONP 2013</div>
+					<div id="pie_InfoIzquierda">
+						<span id="pie_gmd"></span><span id="pie_css"></span><span id="pie_html"></span>
+					</div>
+				</div> 
+		  </div>
+		</div>
+	</body>
+<html>

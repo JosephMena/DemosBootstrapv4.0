@@ -7,42 +7,45 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+	<link rel="stylesheet" href="efectosMenuv0.1.css" type="text/css">
     <title>Hello, world!</title>
   </head>
   <body>
     <div class="container" style="border:1px solid #ccc;margin-top:20px;">
-	  <div class="row">
-		<div class="col">HEADER </div>	
-	  </div>
-	  <div class="row">
-		<div class="col-4 col-xl-2 " id="sidebar"><!-- col-xl-2 hizo un efecto especial -->
-			 <div class="list-group panel">
-                <a href="#menu1" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"><i class="fa fa-dashboard"></i> <span class="hidden-sm-down">Item 1</span> </a>
-                <div class="collapse" id="menu1">
-                    <a href="http://google.com" class="list-group-item" data-parent="#menu1">Subitem 1</a>
-                    <a href="#" class="list-group-item" data-parent="#menu1">Subitem 2</a>
-                </div>
-                <a href="#menu3" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"><i class="fa fa-book"></i> <span class="hidden-sm-down">Item 3 </span></a>
-                <div class="collapse" id="menu3">
-                    <a href="#" class="list-group-item" data-parent="#menu3">3.1</a>
-                    <a href="#menu3sub2" class="list-group-item" data-toggle="collapse" aria-expanded="false">3.2 </a>
-                    <div class="collapse" id="menu3sub2">
-                        <a href="#" class="list-group-item" data-parent="#menu3sub2">3.2 a</a>
-                        <a href="#" class="list-group-item" data-parent="#menu3sub2">3.2 b</a>
-                        <a href="#" class="list-group-item" data-parent="#menu3sub2">3.2 c</a>
-                    </div>
-                    <a href="#" class="list-group-item" data-parent="#menu3">3.3</a>
-                </div>
-            </div>
+		<div class="header_onp row" style="border:1px solid #ff0;">
+			<div class="col">	
+				<blockquote class="blockquote text-center" style="color:#fff;">
+				  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+				</blockquote>
+			</div>	
 		</div>
-		<div class="col-8" style="border:1px solid #fcc;">BODY</div>
-	  </div>
-	  <div class="row">
-		<div class="col">FOOTER</div>
-	  </div>
+		<div class="row" id="mainNav">
+			<div class="menu col-4 col-xl-2 " id="sidebar"><!-- col-xl-2 hizo un efecto especial -->
+				<div class="list-group panel" >
+					<a href="#menu1" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"><i class="fa fa-dashboard"></i> <span class="hidden-sm-down">Item 1</span> </a>
+					<div class="collapse" id="menu1">
+						<a href="http://google.com" class="list-group-item" data-parent="#menu1">Subitem 1</a>
+						<a href="#" class="list-group-item" data-parent="#menu1">Subitem 2</a>
+					</div>
+					<a href="#menu3" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"><i class="fa fa-book"></i> <span class="hidden-sm-down">Item 3 </span></a>
+					<div class="collapse" id="menu3">
+						<a href="#" class="list-group-item" data-parent="#menu3">3.1</a>
+						<a href="#menu3sub2" class="list-group-item" data-toggle="collapse" aria-expanded="false">3.2 </a>
+						<div class="collapse" id="menu3sub2">
+							<a href="#" class="list-group-item" data-parent="#menu3sub2">3.2 a</a>
+							<a href="#" class="list-group-item" data-parent="#menu3sub2">3.2 b</a>
+							<a href="#" class="list-group-item" data-parent="#menu3sub2">3.2 c</a>
+						</div>
+						<a href="#" class="list-group-item" data-parent="#menu3">3.3</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-8" style="border:1px solid #fcc;">BODY</div>
+		</div>
+		<div class="row">
+			<div class="col">FOOTER</div>
+		</div>
 	</div>
-	
 	
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

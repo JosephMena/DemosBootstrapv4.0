@@ -1,0 +1,29 @@
+.header_onp .col{
+	border:1px solid #f00;
+	background-color:#9E0101;
+	height:65px;
+	margin-left:15px;
+}
+
+@media (min-width:1400px){
+	.container{
+		max-width:1300px;
+	}
+}
+
+@media (min-width:1600px){
+	.container{
+		max-width:1500px;
+	}
+}
+
+.menu{
+	display:block;
+}
+
+
+@media (max-width: 900px) {
+	.menu {
+		display:none;
+	}
+}
